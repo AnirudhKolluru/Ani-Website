@@ -1,366 +1,449 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
-  <head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Anirudh Kolluru — Purdue Mechanical Engineering senior specializing in controls, robotics, and machine learning. Explore experience, projects, and resume.">
+  <meta name="theme-color" content="#171717">
+  <title>Anirudh Kolluru | Mechanical &amp; Controls Engineer</title>
 
-    <title>Anirudh Kolluru's Personal Website</title>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script>history.scrollRestoration = "manual"</script>
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-  </head>
-    
-    <header class="header"> 
-        <div>
-            <img class="image-header" src="images/header-image1.jpg" alt="California Redwoods!">
-        </div>
-        <div class="header-text-btn">
-            <a href="#Introduction">
-                <button class="btn btn-outline-light btn-lg" type="button">About Me</button>
-            </a>
-            <a href="#Education">
-                <button class="btn btn-outline-light btn-lg" type="button">Education</button>
-            </a>
-            <a href="#Experience">
-                <button class="btn btn-outline-light btn-lg" type="button">Experience</button>
-            </a>
-            <a href="#Projects">
-              <button class="btn btn-outline-light btn-lg" type="button">Projects</button>
-            </a>
-        </div>
-        <div class="header-text-center-btn">
-            <a href="Resources/AnirudhKolluru2026.html" target="_blank">
-                <button class="btn btn-outline-light btn-lg" type="button">Resume</button>
-            </a>
-            <a href="#Introduction">
-                <button class="down-vector" type="button"><img src="images/down-vector.png" width="50px" height="auto" alt="Move to the next Section"></button>
-            </a>
-        </div>
-        <h1 class="header-text-center" style="color: white">
-            <span id="typewriter-text"></span><span class="cursor">|</span>
-            <script>
-                const text = `Hi, my name is Anirudh Kolluru...`;
-              
-                const speed = 50; // typing speed in ms
-                let i = 0;
-              
-                function typeWriter() {
-                  if (i < text.length) {
-                    document.getElementById("typewriter-text").textContent += text.charAt(i);
-                    i++;
-                    setTimeout(typeWriter, speed);
-                  }
-                }
-              
-                window.onload = typeWriter;
-              </script>
-        </h1>
+  <!-- Open Graph (for LinkedIn / social previews) -->
+  <meta property="og:title" content="Anirudh Kolluru | Mechanical &amp; Controls Engineer">
+  <meta property="og:description" content="Purdue ME senior focused on controls, robotics, and machine learning.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/profile.jpeg">
 
-    </header>
+  <!-- Preconnect speeds up the font handshake before the CSS even asks for it -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- Introduction Section-->
-    <body style="background-color: #3c4142;">
-        <center>
-        <div class="introduction" id="Introduction">
-            <div class="intro-content">
-                <h1 style="padding-top: 20px; color: #f5fffa;">
-                    Introduction
-                </h1>
-            </div>
+  <!-- Only the weights actually used (400/700/900). Montserrat was never
+       referenced anywhere in styles.css and was silently costing 18 font
+       files on every load — cut entirely. -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
 
-            <!-- Introduction -->
-            <div class="intro-header" style="padding-top: 50px;">
-                <div class="about">
-                    <a href="https://open.spotify.com/playlist/1Pzv9muWOFnFUCqq2UfzbR?si=ebc9fb2edff943b4" target="_blank" class="profile-picture-link">
-                        <img class="profile-picture" src="images/profile.jpeg" alt="Picture of me" width="500"/>
-                    </a>
-                    <p class="bio" style="color: #f5fffa; padding: 60px; align-content: center;">
-                        I'm Anirudh (Ani), a 21 year old senior at Purdue University majoring in Mechanical Engineering with a minor in Business Economics.
-                        I'm from Northern California (Bay Area!), I'm interested in Robotics, Energy, and Aerospace. 
-                        In my free time I love to cook, play/listen to music, and explore the outdoors.
-                         Feel free to reach out to me, I would love to talk to you!
-                         <br><br><span style="font-size: x-small;"> 
-                            P.S. If you click on me, it'll take you to a playlist of my favorite music!!
-                        </span>
-                      </p>
-                </div>
-                  
-                </div>
-            </div>
-        </center>
-    </body>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
+  <!-- The hero photo is the Largest Contentful Paint element: tell the
+       browser to fetch it immediately at high priority instead of letting
+       it discover it mid-parse. -->
+  <link rel="preload" as="image" href="images/header-image1.jpg" fetchpriority="high">
+</head>
 
+<body>
 
+  <!-- ===================== Header / Landing ===================== -->
+  <header class="header">
+    <img class="image-header" src="images/header-image1.jpg" alt="California Redwoods" fetchpriority="high" decoding="async">
 
-    <div class="Education" id="Education">
-        <center>
-
-        <h1 style="padding-top: 20px; color: #f5fffa; align-content: center;">Education</h1>
-        
-        <p style="padding-left: 25%; padding-right: 25%; color:#f5fffa">I am currently a Senior at <span style="color: #ffc30b">Purdue University!</span> I study Mechanical Engineering and I absolutely love it!
-        The courses are extremely interesting and challenging. At Purdue I am currently an Undergraduate Research Fellow at the Manufacturing for Extreme Materials
-        Lab(ManuEx) in the Nuclear Engineering Department. Here is a list
-        of all the amazing courses I've taken at my time here and the ones I plan on taking too!</p>
-
-        <div class="courses-header">
-            <p class="courses" style="color: #f5fffa; padding: 20px; align-content: center; font-size: small;">
-                <span style="font-size: large;">Upcoming Courses Fall 2025</span>
-                <br>ME463 Senior Design
-                <br>ME591 Machine Learning
-                <br>FS470 Wine Appreciation
-                <br>ECON451 Game Theory
-                <br><br><br><br>
-
-                <span style="font-size: x-large;">Past Courses</span>
-                <br>ME597 Distributed Energy Resources
-                <br>ME375 Measurement and Control Systems II
-                <br>ME365 Measurement and Control Systems
-                <br>ME354 Machine Design
-                <br>ME323 Mechanics of Materials
-                <br>ME32301 Mechanics of Materials Lab
-                <br>ME315 Heat and Mass Transfer
-                <br>ME30801 Fluid Mechanics Lab
-                <br>ME308 Fluid Mechanics
-                <br>ME300 Thermodynamics II
-                <br>ME290 Sophomore Engineering Seminar
-                <br>ME274 Dynamics
-                <br>ME270 Statics
-                <br>ME263 Sophomore Design
-                <br>ME200 Thermodynamics
-                <br>ECE2K1 Linear Circuit Analysis
-                <br>ECE2K7 Linear Circuit Analysis Lab
-                <br>MSE230 Structure of Materials
-                <br>MFET163 Graphical Communication Using CAD
-                <br>MA303 Partial Differential Equations
-                <br>MA262 Ordinary Differential Equations and Linear Algebra
-                <br>MA261 Multivariable Calculus
-                <br>MA162 Planar and Geometric Calculus
-                <br>ECON461 Industrial Organization
-                <br>ECON301 Managerial Economics
-                <br>ECON252 Macroeconomics
-                <br>ECON251 Microeconomics
-                <br>PHYS241 Electricity and Optics
-                <br>PHYS172 Classical Mechanics
-                <br>CHM115 General Chemistry
-                <br>CS159 C Programming
-                <br>ENGR132 Ideas to Innovation using MatLab
-                <br>ENGR131 Ideas to Innovation using Excel
-                <br>SCLA102 Critical Thinking and Communication II
-                <br>SCLA101 Critical Thinking and Communication I
-                <br>MUS161 Intro to Piano
-            </p>
-        </div>
-    </center>
+    <div class="header-text-btn">
+      <a href="#Introduction"><button class="nav-btn" type="button">About Me</button></a>
+      <a href="#Education"><button class="nav-btn" type="button">Education</button></a>
+      <a href="#Experience"><button class="nav-btn" type="button">Experience</button></a>
+      <a href="#Projects"><button class="nav-btn" type="button">Projects</button></a>
     </div>
 
-
-    <div class="Experience" id="Experience">
-        <h1>Experience</h1>
-
-        <div class="job">
-          <h3> Manufacturing for Extremes Lab </h3>
-          <h4>Undergraduate Research Fellow</h4>
-          <p>Leading experiments with Dr. Xiaoyuan Lou to find optimal strategies for extreme material fabrication in lab environment</p>
-          <p>Created a materials grip to test dogbones below ASTM standard sizes under extreme (650 C) temperatures using Inconcel 625</p>
-        </div>
-      
-        <div class="job">
-          <h3> ME Project Machine Shop </h3>
-          <h4>Part-Time Project Machinist</h4>
-          <p>Taught 100+ Students at the Mechanical Engineering Machine Shop</p>
-          <p>Working at the Machine Shop helping students in operating machining equipment</p>
-        </div>
-
-        <div class="job">
-          <h3> WeeklyJoys</h3>
-          <h4>Website Admin</h4>
-          <p>Sole owner and admin of the WeeklyJoys Website</p>
-          <p>Provided over 300+ Practice Exams to students in all disciplines of engineering helping over 1500+ Students</p>
-        </div>
-
-        <div class="job">
-          <h3> Karlyan</h3>
-          <h4>Product Development Intern</h4>
-          <p>Designed an end to end mechanical heliostat to bring natural light into sun locked areas without requiring electricity</p>
-          <p>Performed cost-benefit analysis to bring product to rural areas while also decreasing overall energy consumption</p>
-          <p>Designed a products that would reduce electricity costs in urban areas by 37% and solutions pertanent to rural areas</p>
-        </div>
-
-        <div class="job">
-          <h3> Purdue FormulaSAE</h3>
-          <h4>Aerodynamics Subteam Member</h4>
-          <p>Utilized Computational Fluid Dynamics (CFD) to design and optimize a high-performance rear wing with a
-            CL of -2.7</p>
-          <p>Designed undertray development, while moving radiator to optimize the airflow while minimzing losses</p>
-          <p>Parted and machined multiple aerodynamic components</p>
-        </div>
-      
-        <div class="job">
-          <h3>Engineering Intern</h3>
-          <h4>ECSite</h4>
-          <p>Designed a scalable automated UIPath program to manage 1700+ equipment processes</p>
-          <p>Optimized program runtime by 20%</p>
-          <p>Led the creation of new proprietary service to scrape data from design software to cloud application</p>
-        </div>
-      
-        <div class="job">
-          <h3>Dougherty Valley High School Robotics Club</h3>
-          <h4>President, Team Captain, and Director of Education</h4>
-          <p>Raised $30,000 dollars, and revamped system with a new constitution, updated marketing, and financial
-            stability measures.</p>
-          <p>Won Worlds Division Champion at the VEX Worlds Competition placing top 15 internationally</p>
-          <p>Led the creation of a new engineering curriculum that was used across all of Northern California</p>
-        </div>
-      </div>
-      
-
-    <body>
-
-      <div class="Projects" id="Projects">
-        <h1>Projects</h1>
-      
-
-        <!-- Project 1 -->
-        <div class="project" onclick="openModal('modal1')">
-          <h3>3D-Printed RC Helicopter</h3>
-          <p>Redesigned an RC helcopter to optimize it.</p>
-        </div>
-      
-        <div id="modal1" class="modal">
-          <div class="modal-content">
-            <span class="close" onclick="closeModal('modal1')">&times;</span>
-            <h2>3D-Printed RC Helicopter</h2>
-            <img src="images/Helicopter.png" alt="Helicopter Taking Flight" />
-            <p>With my roommate I took an old (Over 17 years old!) Chinook RC Helciopter that had stopped working and resoldered the PCB, 
-              added new diodes, swapped in a new battery, and redesigned a full fuselage for a  better more aerodynamic and stronger helicopter that was able to achieve flight</p>
-          </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="project" onclick="openModal('modal2')">
-          <h3>Personal Website Creation</h3>
-          <p>Building a responsive, minimal portfolio site.</p>
-        </div>
-      
-        <div id="modal2" class="modal">
-          <div class="modal-content">
-            <span class="close" onclick="closeModal('modal2')">&times;</span>
-            <h2>Personal Website Redesign</h2>
-            <img src="images/WebsiteImage.png" alt="Website Screenshot" />
-            <p>Creating a responsive, minimal portfolio site with HTML, CSS, and JavaScript. Emphasis on accessibility, clean layout, and performance optimization.
-              Able to create an overall functional website that was able to express individual creativity while also showing off my skills and desire to learn new things.
-            </p>
-          </div>
-        </div>
-
-         <!-- Project 3 -->
-         <div class="project" onclick="openModal('modal3')">
-          <h3>Audio Equalizer</h3>
-          <p>Creating an Audio Equalizer Circuit</p>
-        </div>
-      
-        <div id="modal3" class="modal">
-          <div class="modal-content">
-            <span class="close" onclick="closeModal('modal3')">&times;</span>
-            <h2>Audio Equalizer</h2>
-            <img src="images/AudioEq.MOV" alt="Audio Equalizer Circuit" />
-            <p>Made an audio equalizer that utilized three different bandpasses. Each bandpass was tuned to a specific range of frequencies. The 
-              signal was sent into the circuit and split into each different bandpass. Each bandpass was able to be controlled resistively to increase its
-              overall volume. It then recombined into one signal which could also be altered for a master volume.
-            </p>
-          </div>
-        </div>
-
-
-        <!-- Project 4 -->
-        <div class="project" onclick="openModal('modal4')">
-          <h3>3D-Printed Alloy Testing</h3>
-          <p>Exploring tensile stress-strain behavior in advanced alloys.</p>
-        </div>
-      
-        <div id="modal3" class="modal">
-          <div class="modal-content">
-            <span class="close" onclick="closeModal('modal4')">&times;</span>
-            <h2>3D-Printed Alloy Testing</h2>
-            <img src="images/DogboneTest.png" alt="3D Printed Alloy" />
-            <p>Conducting tensile stress-strain analysis on 3D-printed dogbone samples using a universal testing machine. 
-              Focused on material performance under load and process-structure-property relationships. Also performed FEA Analysis and tested against different infill rates
-            to see how a material deforms under different stress states and geometric states.</p>
-          </div>
-        </div>
-      
-      
-        <!-- Project 5 -->
-        <div class="project" onclick="openModal('modal5')">
-          <h3>Noise Reduction Algorithm</h3>
-          <p>Developed a Noise Reduction Algorithm that can clean any dataset
-          </p>
-        </div>
-      
-        <div id="modal4" class="modal">
-          <div class="modal-content">
-            <span class="close" onclick="closeModal('modal5')">&times;</span>
-            <h2>Noise Reduction Algorithm</h2>
-            <img src="images/NoiseRedux.png" alt="Noise Reduction Algorithm" />
-            <p>Developed a Noise Reduction Algorithm that can fill in holes in data points/tests given, mitigate errors and can smooth out any curve.
-              Can change tolerance on the algorithm to develop a smoother curve or keep more data points as to what was actually obtained.</p>
-          </div>
-        </div>
-      </div>
-      
-      <script>
-        function openModal(id) {
-          document.getElementById(id).style.display = "block";
-        }
-        
-        function closeModal(id) {
-          document.getElementById(id).style.display = "none";
-        }
-        
-        // Close if user clicks outside modal
-        window.onclick = function(event) {
-          const modals = document.getElementsByClassName("modal");
-          for (let modal of modals) {
-            if (event.target === modal) {
-              modal.style.display = "none";
-            }
-          }
-        }
-        </script>
-        
-    </body>
-
-
-
-    <body>
-        <center>
-        <div class="Links" style="padding-top: 20px; color: #f5fffa; align-content: center; background-color: #341514;">
-            <h1>Get in touch with me!</h1>
-            <p>Feel free to contact me via any of the socials/email. Or just email me at kollurua@purdue.edu</p>
-        </div>
-        <div class="social-links" style="color: black; align-content: center; background-color: #341514;">
-            <a href="https://www.linkedin.com/in/anirudh-kolluru" target="_blank" class="socialmedia">
-                <img src="images/LinkedinIcon.png" width="50px" height="auto" alt="My Linkedin">
-            </a>
-            <a href="https://github.com/AnirudhKolluru" target="_blank" class="socialmedia">
-                <img src="images/GithubIcon.png" width="50px" height="auto" alt="My github">
-            </a>
-            <a href="mailto:kolluruanirudh@gmail.com" target="_blank" class="socialmedia">
-                <img src="images/MailIcon.png" width="50px" height="auto" alt="My email">
-            </a>
-        </div>
-        </center>
-
-    </body>
-
-<!-- MAINTANANCE MODE
- <body>
-    <div class="maintanence" style="color: #f5fffa;">
-        <h1>So sorry, the rest of the website is currently under maintanence :/</h1>
+    <div class="header-text-center-btn">
+      <button class="nav-btn nav-btn-resume" type="button" data-modal="modal-resume">Resume</button>
+      <a href="#Introduction" aria-label="Scroll to About Me">
+        <button class="down-vector" type="button">
+          <img src="images/down-vector.png" width="50" height="50" alt="" decoding="async">
+        </button>
+      </a>
     </div>
- </body>
--->
-          
+
+    <h1 class="header-text-center">
+      <span id="typewriter-text"></span><span class="cursor" aria-hidden="true">|</span>
+    </h1>
+  </header>
+
+  <!-- Resume modal: reuses the .modal system below, sized up for readable PDF viewing -->
+  <div id="modal-resume" class="modal modal-resume" role="dialog" aria-modal="true" aria-label="Resume preview">
+    <div class="modal-content resume-modal-content">
+      <span class="close" data-close>&times;</span>
+      <h2>Resume</h2>
+      <iframe class="resume-frame" src="Resources/AnirudhKolluru2026.pdf" title="Anirudh Kolluru's resume"></iframe>
+      <p class="resume-fallback">
+        If the preview doesn't load, <a href="Resources/AnirudhKolluru2026.pdf" target="_blank" rel="noopener noreferrer">open it in a new tab</a> instead.
+      </p>
+      <div class="resume-actions">
+        <a class="nav-btn nav-btn-resume" href="Resources/AnirudhKolluru2026.pdf" download="AnirudhKolluru_Resume.pdf">Download PDF</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== Introduction ===================== -->
+
+  <!-- ===================== Introduction ===================== -->
+  <section class="introduction" id="Introduction">
+    <div class="intro-inner">
+      <h1 class="section-title">Introduction</h1>
+      <div class="about">
+        <a href="https://open.spotify.com/playlist/1Pzv9muWOFnFUCqq2UfzbR?si=ebc9fb2edff943b4" target="_blank" rel="noopener noreferrer" class="profile-picture-link">
+          <img class="profile-picture" src="images/profile.jpeg" alt="Portrait of Anirudh Kolluru" width="350" height="350" loading="lazy" decoding="async">
+        </a>
+        <p class="bio">
+          I'm Anirudh (Ani), a senior at Purdue University majoring in Mechanical Engineering with a minor in
+          Business Economics. I'm from the Bay Area, and I'm currently applying to Electrical Engineering master's
+          programs focused on <strong>controls, robotics, and machine learning</strong>. In my free time I love to
+          cook, play/listen to music, and explore the outdoors. Feel free to reach out - I'd love to talk to you!
+          <br><br>
+          <span class="fine-print">P.S. Click my photo for a playlist of my favorite music.</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Education ===================== -->
+  <section class="Education" id="Education">
+    <h1 class="section-title">Education</h1>
+
+    <p class="edu-intro">
+      I'm a Senior at <span class="accent">Purdue University</span> studying Mechanical Engineering, graduating in
+      December 2026. I'm an Undergraduate Research Fellow in the
+      <span class="accent">Manufacturing for Extremes Lab</span> in the School of Nuclear Engineering under
+      Dr. Xiaoyuan Lou, and I'm currently conducting a Senior Design Project with 4 others.
+    </p>
+
+    <div class="coursework">
+      <h2 class="subsection-title">Relevant Coursework</h2>
+      <div class="course-tags">
+        <span class="tag">Measurement &amp; Control Systems I &amp; II</span>
+        <span class="tag">Machine Learning</span>
+        <span class="tag">Senior Design Capstone</span>
+        <span class="tag">Distributed Energy Resources</span>
+        <span class="tag">Linear Circuit Analysis</span>
+        <span class="tag">Dynamics</span>
+        <span class="tag">ODEs &amp; Linear Algebra</span>
+        <span class="tag">MATLAB (Ideas to Innovation)</span>
+      </div>
+    </div>
+
+    <details class="full-courses">
+      <summary>View full course list</summary>
+      <div class="courses-grid">
+        <div class="course-group">
+          <h3>Controls, Systems &amp; Design</h3>
+          <ul>
+            <li>ME463 Senior Design</li>
+            <li>ME597 Distributed Energy Resources</li>
+            <li>ME597 Hybrid Electric Vehicles</li>
+            <li>ME375 Measurement and Control Systems II</li>
+            <li>ME365 Measurement and Control Systems</li>
+            <li>ME354 Machine Design</li>
+            <li>ME263 Sophomore Design</li>
+          </ul>
+        </div>
+        <div class="course-group">
+          <h3>Mechanical Core</h3>
+          <ul>
+            <li>ME323 Mechanics of Materials</li>
+            <li>ME32301 Mechanics of Materials Lab</li>
+            <li>ME315 Heat and Mass Transfer</li>
+            <li>ME308 Fluid Mechanics</li>
+            <li>ME30801 Fluid Mechanics Lab</li>
+            <li>ME300 Thermodynamics II</li>
+            <li>ME290 Sophomore Engineering Seminar</li>
+            <li>ME274 Dynamics</li>
+            <li>ME270 Statics</li>
+            <li>ME200 Thermodynamics</li>
+            <li>MSE230 Structure of Materials</li>
+            <li>MFET163 Graphical Communication Using CAD</li>
+          </ul>
+        </div>
+        <div class="course-group">
+          <h3>Electrical, Computing &amp; Math</h3>
+          <ul>
+            <li>ECE2K1 Linear Circuit Analysis</li>
+            <li>ECE2K7 Linear Circuit Analysis Lab</li>
+            <li>CS159 Java Programming</li>
+            <li>ENGR132 Ideas to Innovation using MATLAB</li>
+            <li>ENGR131 Ideas to Innovation using Excel</li>
+            <li>MA303 Partial Differential Equations</li>
+            <li>MA262 Ordinary Differential Equations &amp; Linear Algebra</li>
+            <li>MA261 Multivariable Calculus</li>
+            <li>MA162 Planar and Geometric Calculus</li>
+            <li>PHYS241 Electricity and Optics</li>
+            <li>PHYS172 Classical Mechanics</li>
+            <li>CHM115 General Chemistry</li>
+          </ul>
+        </div>
+        <div class="course-group">
+          <h3>Business &amp; Communication</h3>
+          <ul>
+            <li>ECON461 Industrial Organization</li>
+            <li>ECON451 Game Theory</li>
+            <li>ECON301 Managerial Economics</li>
+            <li>ECON252 Macroeconomics</li>
+            <li>ECON251 Microeconomics</li>
+            <li>SCLA102 Critical Thinking and Communication II</li>
+            <li>SCLA101 Critical Thinking and Communication I</li>
+            <li>FS470 Wine Appreciation</li>
+            <li>MUS161 Intro to Piano</li>
+          </ul>
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ===================== Experience ===================== -->
+  <section class="Experience" id="Experience">
+    <h1 class="section-title">Experience</h1>
+
+    <div class="job">
+      <h3>Gas Engineering Intern</h3>
+      <h4>PG&amp;E — Engineering Rotational Development Program (ERDP)</h4>
+      <p>Built an automated data processing platform that reduced a multi-week manual workflow to under two minutes, later featured in the company newsletter.</p>
+      <p>Designed a PowerApps form to standardize Notice of Violation (NOV) logging across the gas engineering team.</p>
+    </div>
+
+    <div class="job">
+      <h3>Undergraduate Research Fellow</h3>
+      <h4>Manufacturing for Extremes Lab (ManuEx), Purdue School of Nuclear Engineering</h4>
+      <p>Lead experiments with Dr. Xiaoyuan Lou to identify optimal strategies for extreme-environment material fabrication.</p>
+      <p>Designed and built a materials grip to test sub-ASTM-standard dogbone specimens in Inconel 625 at temperatures up to 650°C.</p>
+    </div>
+
+    <div class="job">
+      <h3>Part-Time Project Machinist</h3>
+      <h4>Purdue ME Project Machine Shop</h4>
+      <p>Taught 100+ students to safely and effectively operate machining equipment.</p>
+      <p>Supported student projects across the Mechanical Engineering department's project machine shop.</p>
+    </div>
+
+    <div class="job">
+      <h3>Aerodynamics Subteam Member</h3>
+      <h4>Purdue Formula SAE</h4>
+      <p>Used CFD to design and optimize a high-performance rear wing achieving a C<sub>L</sub> of -2.7.</p>
+      <p>Developed undertray geometry and repositioned the radiator to optimize airflow and minimize losses.</p>
+      <p>Machined and fabricated multiple aerodynamic components.</p>
+    </div>
+
+    <div class="job">
+      <h3>Product Development Intern</h3>
+      <h4>Karlyan</h4>
+      <p>Designed an end-to-end mechanical heliostat to bring natural light into sun-locked spaces without electricity.</p>
+      <p>Ran a cost-benefit analysis and designed variants projected to cut electricity costs in urban areas by 37%, with additional solutions for rural deployment.</p>
+    </div>
+
+    <div class="job">
+      <h3>Engineering Intern</h3>
+      <h4>ECSite</h4>
+      <p>Built a scalable automated UiPath program to manage 1,700+ equipment processes, improving runtime by 20%.</p>
+      <p>Led development of a proprietary service to scrape data from design software into a cloud application.</p>
+    </div>
+
+    <div class="job">
+      <h3>Website Administrator</h3>
+      <h4>WeeklyJoys</h4>
+      <p>Sole owner and administrator of the WeeklyJoys platform, providing 300+ practice exams that reached 1,500+ engineering students.</p>
+    </div>
+
+    <div class="job">
+      <h3>President, Team Captain &amp; Director of Education</h3>
+      <h4>Dougherty Valley High School Robotics Club</h4>
+      <p>Raised $30,000 and rebuilt the club's constitution, marketing, and financial stability measures.</p>
+      <p>Won Worlds Division Champion at the VEX Worlds Competition, placing top 15 internationally.</p>
+      <p>Built a new engineering curriculum later adopted across Northern California.</p>
+    </div>
+  </section>
+
+  <!-- ===================== Projects ===================== -->
+  <section class="Projects" id="Projects">
+    <h1 class="section-title">Projects</h1>
+
+    <div class="project" data-modal="modal-arm" tabindex="0" role="button" aria-haspopup="dialog">
+      <h3>Vision-Controlled Robotic Arm</h3>
+      <p>Real-time hand tracking driving a robotic arm through an LQR controller.</p>
+    </div>
+    <div id="modal-arm" class="modal" role="dialog" aria-modal="true">
+      <div class="modal-content">
+        <span class="close" data-close>&times;</span>
+        <h2>Vision-Controlled Robotic Arm</h2>
+        <img src="images/RoboticArm.png" alt="Robotic arm hardware" loading="lazy" decoding="async">
+        <p>Built a robotic arm controlled by real-time hand tracking using OpenCV and MediaPipe, with an LQR
+          controller producing smooth, stable motion from noisy vision input. Includes a full BOM evaluated across
+          Arduino and ESP32 configurations and a servo comparison (MG996R vs. DS3218 PRO).</p>
+      </div>
+    </div>
+
+    <div class="project" data-modal="modal-der" tabindex="0" role="button" aria-haspopup="dialog">
+      <h3>Optimal Solar Farm Array Placement</h3>
+      <p>ML Framework to Optimize Solar Farm Array Placement.</p>
+    </div>
+    <div id="modal-der" class="modal" role="dialog" aria-modal="true">
+      <div class="modal-content">
+        <span class="close" data-close>&times;</span>
+        <h2>Optimal Solar Farm Array Placement</h2>
+        <img src="images/DERFarm.png" alt="Framework Output" loading="lazy" decoding="async">
+        <p>Developed an optimized Machine Learning Framwork that can utilize any google earth link to determine
+          the optimal location for a solar farm. Utilizes NASA EIA data to produce bounding box of optimal farm
+          location. Adjustable parameters were also implemented with ROI calculator shown.</p>
+      </div>
+    </div>
+
+    <div class="project" data-modal="modal-pid" tabindex="0" role="button" aria-haspopup="dialog">
+      <h3>PID Autotuner</h3>
+      <p>Automatic PID tuning via Differential Evolution optimization.</p>
+    </div>
+    <div id="modal-pid" class="modal" role="dialog" aria-modal="true">
+      <div class="modal-content">
+        <span class="close" data-close>&times;</span>
+        <h2>PID Autotuner</h2>
+        <img src="images/PIDAutotuner.png" alt="PID autotuner plot" loading="lazy" decoding="async">
+        <p>Built a Python PID autotuner that uses Differential Evolution (via SciPy) to search for controller gains
+          automatically, removing manual trial-and-error tuning and converging on stable step responses across
+          different plant models.</p>
+      </div>
+    </div>
+
+    <div class="project" data-modal="modal-alloy" tabindex="0" role="button" aria-haspopup="dialog">
+      <h3>3D-Printed Alloy Testing</h3>
+      <p>Tensile stress-strain behavior in advanced alloys across print infill rates.</p>
+    </div>
+    <div id="modal-alloy" class="modal" role="dialog" aria-modal="true">
+      <div class="modal-content">
+        <span class="close" data-close>&times;</span>
+        <h2>3D-Printed Alloy Testing</h2>
+        <img src="images/DogboneTest.png" alt="3D printed alloy dogbone specimen" loading="lazy" decoding="async">
+        <p>Ran tensile stress-strain analysis on 3D-printed dogbone samples using a universal testing machine,
+          focused on process-structure-property relationships. Paired physical testing with FEA and compared
+          results across infill rates to characterize deformation under different stress and geometric states.</p>
+      </div>
+    </div>
+
+    <div class="project" data-modal="modal-noise" tabindex="0" role="button" aria-haspopup="dialog">
+      <h3>Noise Reduction Algorithm</h3>
+      <p>A tunable algorithm to clean and smooth noisy experimental datasets.</p>
+    </div>
+    <div id="modal-noise" class="modal" role="dialog" aria-modal="true">
+      <div class="modal-content">
+        <span class="close" data-close>&times;</span>
+        <h2>Noise Reduction Algorithm</h2>
+        <img src="images/NoiseRedux.png" alt="Noise reduction algorithm output" loading="lazy" decoding="async">
+        <p>Developed an algorithm that fills gaps in experimental data, mitigates measurement error, and smooths
+          noisy curves, with an adjustable tolerance parameter to trade off curve smoothness against fidelity to the
+          original data points.</p>
+      </div>
+    </div>
+
+    <div class="project" data-modal="modal-heli" tabindex="0" role="button" aria-haspopup="dialog">
+      <h3>3D-Printed RC Helicopter</h3>
+      <p>Rebuilt a 17-year-old RC helicopter with a redesigned fuselage.</p>
+    </div>
+    <div id="modal-heli" class="modal" role="dialog" aria-modal="true">
+      <div class="modal-content">
+        <span class="close" data-close>&times;</span>
+        <h2>3D-Printed RC Helicopter</h2>
+        <img src="images/Helicopter.png" alt="Helicopter taking flight" loading="lazy" decoding="async">
+        <p>With my roommate, restored a Chinook RC helicopter that had sat dead for over 17 years: resoldered the
+          PCB, added new diodes, swapped in a new battery, and 3D-printed a redesigned, more aerodynamic fuselage.
+          The rebuilt helicopter achieved flight.</p>
+      </div>
+    </div>
+
+    <div class="project" data-modal="modal-eq" tabindex="0" role="button" aria-haspopup="dialog">
+      <h3>Audio Equalizer Circuit</h3>
+      <p>A three-band analog equalizer with independently controlled bandpass filters.</p>
+    </div>
+    <div id="modal-eq" class="modal" role="dialog" aria-modal="true">
+      <div class="modal-content">
+        <span class="close" data-close>&times;</span>
+        <h2>Audio Equalizer Circuit</h2>
+        <video src="images/AudioEq.MOV" controls preload="none" playsinline poster="images/AudioEqPoster.png">
+          Your browser doesn't support embedded video. <a href="images/AudioEq.MOV">Download the clip</a> instead.
+        </video>
+        <p>Built a three-band audio equalizer split into independent bandpass filters, each resistively controlled
+          to boost or cut a specific frequency range before recombining into a single signal with an adjustable
+          master volume.</p>
+      </div>
+    </div>
+
+    <div class="project" data-modal="modal-site" tabindex="0" role="button" aria-haspopup="dialog">
+      <h3>Personal Website Creation</h3>
+      <p>Built my own website using HTML and CSS.</p>
+    </div>
+    <div id="modal-site" class="modal" role="dialog" aria-modal="true">
+      <div class="modal-content">
+        <span class="close" data-close>&times;</span>
+        <h2>Personal Website Creation</h2>
+        <img src="images/WebsiteImage.png" alt="Website Backend" loading="lazy" decoding="async">
+        <p>After gaining access to a student domain through Purdue I was able to build this website 
+          you are currently on using HTML and CSS.</p>
+      </div>
+    </div>
+</section>
+
+  <!-- ===================== Contact / Social ===================== -->
+  <footer>
+    <div class="Links">
+      <h1 class="section-title">Get in Touch</h1>
+      <p>Feel free to reach out through any of the links below, or email me directly at kollurua@purdue.edu.</p>
+    </div>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/anirudh-kolluru" target="_blank" rel="noopener noreferrer" class="socialmedia" aria-label="LinkedIn">
+        <img src="images/LinkedinIcon.png" width="50" height="50" alt="LinkedIn" loading="lazy" decoding="async">
+      </a>
+      <a href="https://github.com/AnirudhKolluru" target="_blank" rel="noopener noreferrer" class="socialmedia" aria-label="GitHub">
+        <img src="images/GithubIcon.png" width="50" height="50" alt="GitHub" loading="lazy" decoding="async">
+      </a>
+      <a href="mailto:kolluruanirudh@gmail.com" class="socialmedia" aria-label="Email">
+        <img src="images/MailIcon.png" width="50" height="40" alt="Email" loading="lazy" decoding="async">
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    // Typewriter: start on DOMContentLoaded instead of window.onload so it
+    // doesn't wait on the hero image / fonts to finish loading first.
+    document.addEventListener('DOMContentLoaded', () => {
+      const text = "Hi, my name is Anirudh Kolluru...";
+      const target = document.getElementById('typewriter-text');
+      const speed = 50;
+      let i = 0;
+      (function typeWriter() {
+        if (i < text.length) {
+          target.textContent += text.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        }
+      })();
+    });
+
+    // Modals: single delegated listener instead of an inline onclick per
+    // card, plus Escape-to-close and click-outside-to-close.
+    document.addEventListener('click', (e) => {
+      const card = e.target.closest('[data-modal]');
+      if (card) {
+        document.getElementById(card.dataset.modal).classList.add('is-open');
+        return;
+      }
+      if (e.target.matches('[data-close]')) {
+        e.target.closest('.modal').classList.remove('is-open');
+        return;
+      }
+      if (e.target.classList.contains('modal')) {
+        e.target.classList.remove('is-open');
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.modal.is-open').forEach(m => m.classList.remove('is-open'));
+      }
+    });
+
+    document.querySelectorAll('[data-modal]').forEach(card => {
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          document.getElementById(card.dataset.modal).classList.add('is-open');
+        }
+      });
+    });
+  </script>
+
+</body>
 </html>
