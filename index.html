@@ -112,6 +112,7 @@
       <div class="course-tags">
         <span class="tag">Measurement &amp; Control Systems I &amp; II</span>
         <span class="tag">Machine Learning</span>
+        <span class="tag">System Identification</span>
         <span class="tag">Senior Design Capstone</span>
         <span class="tag">Distributed Energy Resources</span>
         <span class="tag">Linear Circuit Analysis</span>
@@ -129,7 +130,7 @@
           <ul>
             <li>ME463 Senior Design</li>
             <li>ME597 Distributed Energy Resources</li>
-            <li>ME597 Hybrid Electric Vehicles</li>
+            <li>ME584 System Identification</li>
             <li>ME375 Measurement and Control Systems II</li>
             <li>ME365 Measurement and Control Systems</li>
             <li>ME354 Machine Design</li>
@@ -266,6 +267,23 @@
         <p>Built a robotic arm controlled by real-time hand tracking using OpenCV and MediaPipe, with an LQR
           controller producing smooth, stable motion from noisy vision input. Includes a full BOM evaluated across
           Arduino and ESP32 configurations and a servo comparison (MG996R vs. DS3218 PRO).</p>
+      </div>
+    </div>
+
+    <div class="project" data-modal="modal-kalman" tabindex="0" role="button" aria-haspopup="dialog">
+      <h3>Kalman Filter for F1 Telemetry Tracking</h3>
+      <p>Injected Gaussian Noise into Telemetry data and Used Kalman Filter to decode real time track dynamics.</p>
+    </div>
+    <div id="modal-kalman" class="modal" role="dialog" aria-modal="true">
+      <div class="modal-content">
+        <span class="close" data-close>&times;</span>
+        <h2>Kalman Filter for F1 Telemetry Tracking</h2>
+        <video src="images/KalmanFilter.mov" controls preload="none" playsinline poster="images/KalmanFilterPoster.png">
+          Your browser doesn't support embedded video. <a href="images/KalmanFilter.mov">Download the clip</a> instead.
+        </video>
+        <p>Built Linear Kalman Filter. Using fastF1 API data I was able to take the fastest lap telemetry data. 
+          From here I injected Gaussian Noise into the system and developed a linear Kalman Filter to decode the system
+          and compared it to the actual telemetry data to view algorithm cleanup.</p>
       </div>
     </div>
 
